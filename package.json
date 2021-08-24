@@ -1,0 +1,48 @@
+{
+  "name": "ibm-interview",
+  "version": "1.0.0",
+  "description": "Quick and dirty backend MENT starter",
+  "scripts": {
+    "build": "tsc --extendedDiagnostics true",
+    "start:prod": "NODE_ENV=production node dist",
+    "start:dev": "nodemon --watch 'src' --ext 'ts' --exec 'ts-node -r dotenv/config src'",
+    "test": "nodemon --watch 'spec' --ext 'spect.ts' --exec 'ts-node spec'",
+    "test:no-reloading": "ts-node spec",
+    "format": "eslint . --fix && prettier --write '**/*.{ts, js, json, md}' '!.nyc_output/**' '!.travis.yml' '!.vscode' '!coverage/**' '!dist/**' '!package-lock.json' .",
+    "lint": "eslint . --ext .ts && prettier --list-different '**/*.{ts, js, json, md}' '!.nyc_output/**' '!.travis.yml' '!.vscode' '!coverage/**' '!dist/**' '!package-lock.json' ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbgooch/ibm-interview.git"
+  },
+  "author": "Nick Gooch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nbgooch/ibm-interview/issues"
+  },
+  "homepage": "https://github.com/nbgooch/ibm-interview#readme",
+  "dependencies": {
+    "apollo-datasource-rest": "^3.1.1",
+    "apollo-server-express": "^3.1.2",
+    "express": "^4.17.1",
+    "frontend": "^2.0.0-alpha.4",
+    "graphql": "^15.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.13.8",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}

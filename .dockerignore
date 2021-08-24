@@ -1,0 +1,6 @@
+node_modules
+.npmrc
+.nyc_output
+sonar-project.properties
+coverage
+Dockerfile
