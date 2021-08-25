@@ -4,3 +4,5 @@ node_modules
 sonar-project.properties
 coverage
 Dockerfile
+helm
+.env

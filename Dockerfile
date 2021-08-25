@@ -9,6 +9,6 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 80:4020
+EXPOSE  4020
 
 ENTRYPOINT npm run start:prod

@@ -27,7 +27,8 @@ async function getDatabaseConnection(db: string): Promise<void> {
     await mongoose.connect(uri, options);
     return Promise.resolve(null);
   } catch (error) {
-    logger.error({ message: `failed to obtain db connection to: ${_db}`, error: error });
+    logger.error(`failed to obtain db connection to: ${_db}`);
+    logger.error(`${JSON.stringify(error)}`);
     process.exit(1);
   }
 }
